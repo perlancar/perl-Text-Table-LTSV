@@ -41,7 +41,7 @@ sub table {
         }
         push @table, join(
 	    "\t",
-	    map { _encode("$labels[$_]:" . defined($row->[$_]) ? $row->[$_] : '') } (0..$max_index)
+	    map { _encode("$labels[$_]:" . (defined($row->[$_]) ? $row->[$_] : '')) } (0..$max_index)
 	), "\n";
     }
 
